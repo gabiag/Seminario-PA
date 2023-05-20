@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:datePickerMode="calendar"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/selecionar_semana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/date"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/date_picker"
+        android:layout_alignStart="@+id/date_picker"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/data_selecionada"
+        android:text="23/05/2023 a 30/05/2023"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_below="@+id/date_picker"
+        android:layout_toEndOf="@+id/selecionar_semana"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <Button
+        android:id="@+id/select_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/data_selecionada"
+        android:text="Salvar Data"/>
+
+</RelativeLayout>
