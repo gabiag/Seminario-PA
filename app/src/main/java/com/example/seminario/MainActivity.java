@@ -9,19 +9,21 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CardView cardHorario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_card);
 
-        cardHorario = findViewById(R.id.appointment);
-        cardHorario.setOnClickListener(new View.OnClickListener() {
+        CardView cardAllDay = findViewById(R.id.allDay);
+        CardView cardAppointment = findViewById(R.id.appointment);
+
+        cardAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AgendamentoTime.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                Intent agendamentoTime = new Intent(MainActivity.this, AgendamentoTime.class);
+                startActivity(agendamentoTime);
             }
         });
+
     }
 }

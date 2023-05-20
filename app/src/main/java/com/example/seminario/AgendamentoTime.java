@@ -47,7 +47,7 @@ public class AgendamentoTime extends AppCompatActivity {
                 } else {
                     am_pm = "AM";
                 }
-                tv_result.setText("Horário selecionado: "+ hour + ":" + am_pm);
+                tv_result.setText("Horário selecionado: "+ hour + ":"+ minute + am_pm);
             }
         });
 
