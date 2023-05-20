@@ -10,9 +10,7 @@
         android:id="@+id/timePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/white"
-        />
+        android:backgroundTint="#F2EFEA" />
 
     <Button
         android:id="@+id/btn_getDate"
@@ -20,16 +18,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/timePicker"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="160dp"
-        android:text="GET DATE"/>
+        android:layout_marginLeft="150dp"
+        android:backgroundTint="#D0E3E0"
+        android:text="AGENDAR"/>
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_getDate"
-        android:layout_marginLeft="120dp"
         android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textSize="18sp"/>
 
