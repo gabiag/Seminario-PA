@@ -13,4 +13,46 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="BACKGROUND">
+        <item name="android:background">@drawable/gradient</item>
+    </style>
+
+    <!-- textos, titulos e subtitulos, botões -->
+    <style name="TEXTCOLOR_sub">
+        <item name="android:textColor">@color/marrom</item>
+    </style>
+    <style name="TEXTCOLOR_title">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="BUTTONS">
+        <item name="android:backgroundTint">#FFD0E3E0</item>
+    </style>
+
+    <!--  cards  -->
+    <style name="cardView_ALLDAY">
+        <item name="android:backgroundTint">#B7D0E3E0</item>
+    </style>
+    <style name="cardView_APPOINTMENT">
+        <item name="android:backgroundTint">#6BFFD1BE</item>
+    </style>
+    <style name="cardView_SCHEDULE">
+        <item name="android:backgroundTint">#59F2B6B6</item>
+    </style>
+    <style name="cardView_SCHEDULEMONTH">
+        <item name="android:backgroundTint">#40F2B6B6</item>
+    </style>
+
+    <!--  status bar telas  -->
+    <style name="telaCards">
+        <item name="android:statusBarColor">@color/sb_cards</item>item
+    </style>
+
+    <style name="telaDate">
+        <item name="android:statusBarColor">@color/sb_cards</item>item
+    </style>
+    <style name="telaTime">
+        <item name="android:statusBarColor">@color/marrom</item>item
+    </style>
 </resources>

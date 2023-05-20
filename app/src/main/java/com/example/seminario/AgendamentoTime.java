@@ -20,6 +20,7 @@ public class AgendamentoTime extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.telaTime);
         setContentView(R.layout.activity_time_agendamento);
 
         tv_result = (TextView) findViewById(R.id.tv_result);
@@ -28,11 +29,11 @@ public class AgendamentoTime extends AppCompatActivity {
         btn_getDate = (Button) findViewById(R.id.btn_getDate);
 
         //Alterando a cor da status bar
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.marrom));
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            Window window = getWindow();
+//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            window.setStatusBarColor(getResources().getColor(R.color.marrom));
+//        }
 
         btn_getDate.setOnClickListener(new View.OnClickListener() {
             @Override

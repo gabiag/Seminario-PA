@@ -2,15 +2,64 @@
     <!-- Base application theme. -->
     <style name="Theme.Seminario" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/time_picker</item>
+        <item name="colorPrimaryVariant">#FAD1B7AB</item>
+        <item name="colorOnPrimary">#FAD1B7AB</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">#5848C6</item>
+        <item name="colorSecondaryVariant">#5848C6</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Customize your theme here. -->
     </style>
+    <!--  bacckground color -->
+    <style name="BACKGROUND">
+        <item name="android:background">@drawable/gradient_night</item>
+    </style>
+
+    <!-- textos, titulos e subtitulos, botões -->
+    <style name="TEXTCOLOR_sub">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TEXTCOLOR_title">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="BUTTONS">
+        <item name="android:backgroundTint">@color/time_picker</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+   <!--  cards  -->
+    <style name="cardView_ALLDAY">
+        <item name="android:backgroundTint">#5848C6</item>
+    </style>
+    <style name="cardView_APPOINTMENT">
+        <item name="android:backgroundTint">#5DD8D0</item>
+    </style>
+    <style name="cardView_SCHEDULE">
+        <item name="android:backgroundTint">#FF9B91</item>
+    </style>
+    <style name="cardView_SCHEDULEMONTH">
+        <item name="android:backgroundTint">#FBAB4D</item>
+    </style>
+
+    <!--  status bar telas  -->
+    <style name="telaCards">
+        <item name="android:statusBarColor">@color/sb_cards_night</item>item
+    </style>
+    <style name="telaDate">
+        <item name="android:statusBarColor">@color/sb_cards_night</item>item
+    </style>
+    <style name="telaTime">
+        <item name="android:statusBarColor">@color/time_picker</item>item
+    </style>
+
+    <!--  date picker  -->
+    <style name="MeuTimePickerStyle">
+        <item name="android:backgroundTint">@color/time_picker</item> <!-- Cor dos números -->
+        <item name="android:numbersSelectorColor">@color/time_picker</item> <!-- Cor do seletor -->
+        <!-- Outros itens de estilo, se necessário -->
+    </style>
+
 </resources>

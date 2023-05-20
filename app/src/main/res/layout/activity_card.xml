@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient"
+    style="@style/BACKGROUND"
     tools:context=".MainActivity">
 
     <ImageView
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="#B7D0E3E0"
+        style="@style/cardView_ALLDAY"
         app:cardCornerRadius="10dp"
         android:layout_margin="16dp">
 
@@ -33,6 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="O Dia todo"
+                style="@style/TEXTCOLOR_title"
                 android:layout_margin="7dp"/>
 
             <ImageView
@@ -50,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Agende um evento em um dia do mês"
-                    android:textColor="#998A84"
+                    style="@style/TEXTCOLOR_sub"
                     android:layout_margin="7dp"/>
 
             </LinearLayout>
@@ -63,7 +64,7 @@
         android:id="@+id/appointment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#6BFFD1BE"
+        style="@style/cardView_APPOINTMENT"
         app:cardCornerRadius="10dp"
         android:layout_margin="16dp"
         app:cardElevation="0dp">
@@ -77,6 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Horário marcado"
+                style="@style/TEXTCOLOR_title"
                 android:layout_margin="7dp"/>
 
             <ImageView
@@ -94,7 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Agende um evento em um dia do mês"
-                    android:textColor="#998A84"
+                    style="@style/TEXTCOLOR_sub"
                     android:layout_margin="7dp"/>
             </LinearLayout>
 
@@ -106,7 +108,7 @@
         android:id="@+id/scheduleDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#59F2B6B6"
+        style="@style/cardView_SCHEDULE"
         app:cardCornerRadius="10dp"
         android:layout_margin="16dp"
         app:cardElevation="0dp">
@@ -120,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Agenda do Dia"
+                style="@style/TEXTCOLOR_title"
                 android:layout_margin="7dp"/>
 
             <ImageView
@@ -137,7 +140,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Confira sua agenda do dia"
-                    android:textColor="#998A84"
+                    style="@style/TEXTCOLOR_sub"
                     android:layout_margin="7dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -147,7 +150,7 @@
         android:id="@+id/scheduleMonth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#40F2B6B6"
+        style="@style/cardView_SCHEDULEMONTH"
         app:cardCornerRadius="10dp"
         android:layout_margin="16dp"
         app:cardElevation="0dp">
@@ -161,6 +164,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Agenda do Mês"
+                style="@style/TEXTCOLOR_title"
                 android:layout_margin="7dp"/>
 
             <ImageView
@@ -178,7 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Confira sua agenda do mês"
-                    android:textColor="#998A84"
+                    style="@style/TEXTCOLOR_sub"
                     android:layout_margin="7dp"/>
             </LinearLayout>
         </LinearLayout>

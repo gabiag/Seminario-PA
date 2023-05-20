@@ -36,6 +36,7 @@ public class AgendamentoDate extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.telaDate);
         setContentView(R.layout.activity_date_picker);
 
         datePicker = findViewById(R.id.date_picker);
@@ -43,12 +44,7 @@ public class AgendamentoDate extends AppCompatActivity {
         dataSelecionada = findViewById(R.id.data_selecionada);
         salvar = findViewById(R.id.select_data);
 
-        //Alterando a cor da status bar
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.statusbar));
-        }
+//
 
         dataSelecionada.setText(dateFormat.format(calendar.getTime())); // Realiza set da data inicial
 

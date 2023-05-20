@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    style="@style/BACKGROUND"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -32,6 +32,7 @@
         android:text="23/05/2023 a 30/05/2023"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/TEXTCOLOR_sub"
         android:textSize="25dp"
         android:layout_below="@+id/date_picker"
         android:layout_toEndOf="@+id/selecionar_semana"
@@ -47,7 +48,7 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/data_selecionada"
         android:textColor="@color/white"
-        android:backgroundTint="#D0E3E0"
+        style="@style/BUTTONS"
         android:text="Salvar Data"/>
 
 </RelativeLayout>
