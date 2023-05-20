@@ -3,8 +3,11 @@ package com.example.seminario;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.util.Pair;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
@@ -39,6 +42,13 @@ public class AgendamentoDate extends AppCompatActivity {
         selecionarSemana = findViewById(R.id.selecionar_semana);
         dataSelecionada = findViewById(R.id.data_selecionada);
         salvar = findViewById(R.id.select_data);
+
+        //Alterando a cor da status bar
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getResources().getColor(R.color.statusbar));
+        }
 
         dataSelecionada.setText(dateFormat.format(calendar.getTime())); // Realiza set da data inicial
 

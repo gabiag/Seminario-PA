@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -45,6 +46,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/data_selecionada"
+        android:textColor="@color/white"
+        android:backgroundTint="#D0E3E0"
         android:text="Salvar Data"/>
 
 </RelativeLayout>

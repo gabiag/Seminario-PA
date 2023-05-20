@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".AgendamentoTime">
 
     <TimePicker
@@ -20,6 +21,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="150dp"
         android:backgroundTint="#D0E3E0"
+        android:textColor="@color/white"
         android:text="AGENDAR"/>
 
     <TextView

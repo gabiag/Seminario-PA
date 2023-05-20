@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="start_color">#D0E3E0</color>
     <color name="end_color">#AEDAD3</color>
+    <color name="marrom">#998A84</color>
+    <color name="background">#D1DAD7</color>
+    <color name="statusbar">#36FFD1BE</color>
 </resources>
