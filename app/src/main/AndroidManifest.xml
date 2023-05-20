@@ -15,6 +15,9 @@
             android:name=".AgendamentoTime"
             android:exported="false" />
         <activity
+            android:name=".AgendamentoDate"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
