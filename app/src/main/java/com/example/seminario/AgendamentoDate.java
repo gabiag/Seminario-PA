@@ -3,11 +3,9 @@ package com.example.seminario;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.util.Pair;
 
-import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
@@ -20,17 +18,19 @@ import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClic
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
+@SuppressWarnings("ALL")
 public class AgendamentoDate extends AppCompatActivity {
 
     private TextView dataSelecionada;
     private ImageButton selecionarSemana;
     private Button salvar;
     private DatePicker datePicker;
-    private MaterialDatePicker materialDatePicker;
+    private MaterialDatePicker<Pair<Long, Long>> materialDatePicker;
     private Calendar calendar = Calendar.getInstance();
 
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", new Locale("pt", "BR"));
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 
 
     @Override
@@ -43,8 +43,6 @@ public class AgendamentoDate extends AppCompatActivity {
         selecionarSemana = findViewById(R.id.selecionar_semana);
         dataSelecionada = findViewById(R.id.data_selecionada);
         salvar = findViewById(R.id.select_data);
-
-//
 
         dataSelecionada.setText(dateFormat.format(calendar.getTime())); // Realiza set da data inicial
 
@@ -70,6 +68,8 @@ public class AgendamentoDate extends AppCompatActivity {
      * Exemplo de como gerar um seletor de diversos dias.
      */
     protected void seletorSemana(){
+
+        // Instancia um novo DatePicker por meio de metodos da biblioteca.
         materialDatePicker = MaterialDatePicker.Builder.dateRangePicker().setTitleText("Select dates")
                 .setSelection(
                         Pair.create(MaterialDatePicker.todayInUtcMilliseconds(),null )
@@ -77,16 +77,19 @@ public class AgendamentoDate extends AppCompatActivity {
                 .build();
         materialDatePicker.show(getSupportFragmentManager(), "Tag_picker");
 
+        // Adiciona comportamento esperado ao clicar em button "salvar".
         materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
             @Override
             public void onPositiveButtonClick(Object selection) {
                 Pair<Long, Long> date = (Pair<Long, Long>) selection;
-                long start = date.first;
-                long end = date.second;
+                long start = date.first + TimeUnit.DAYS.toMillis(1); // Pega primeiro dia e adiciona 1 dia (Correção de Fuso)
+                long end = date.second + TimeUnit.DAYS.toMillis(1); // Pega ultimo dia e adiciona 1 dia (Correção de Fuso)
 
-                dataSelecionada.setText(dateFormat.format(start) + " a " + dateFormat.format(end));
+
+                dataSelecionada.setText(String.format("%s a %s", dateFormat.format(start), dateFormat.format(end)));
             }
         });
+
     }
 
     /**
